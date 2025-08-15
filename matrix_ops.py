@@ -28,6 +28,19 @@ class Matrix:
 
         # Return a new Matrix object with the resulting data
         return Matrix(result_data)
+    def scamul(self, scalar):
+        # 3 Scalar Multiplication
+        #creates a new matrix to store the results
+        result_data = [[0 for _ in range(self.cols)] for _ in range(self.rows)]
+        
+        #iterate through the matrix
+        for i in range(self.rows):
+            for j in range(self.cols):
+                #perform the multiplication for each element
+                result_data[i][j] = self.data[i][j] * scalar
+                
+        # Return a new Matrix object with the resulting data
+        return Matrix(result_data)
 
     def __repr__(self):
         """A helper method to print the matrix nicely."""
